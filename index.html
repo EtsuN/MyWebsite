@@ -16,11 +16,12 @@
   <link rel="stylesheet" href="css/mywebsite.css">
 </head>
 
-<body style="height:1500px">
+<body data-spy="scroll" data-target=".navbar" data-offset="50" style="margin-bottom: 20px">
   
   <div class="jumbotron text-center">
+  	<br/>
 	<h1>Hi! I'm Etsu Nakahara</h1>
-	<p>Resize this responsive page to see the effect!</p> 
+	<br/>
   </div>
 
 
@@ -32,83 +33,92 @@
 	        About Me
 	      </a>
 	      <div class="dropdown-menu">
-	        <a class="dropdown-item" href="#">Education</a>
-	        <a class="dropdown-item" href="#">Skills</a>
-	        <a class="dropdown-item" href="#">Work Experience</a>
+	        <a class="dropdown-item" href="#section-education">Education</a>
+	        <a class="dropdown-item" href="#section1">Skills</a>
+	        <a class="dropdown-item" href="#section1">Work Experience</a>
 	      </div>
 	    </li>
 	    <li class="nav-item">
-	      <a class="nav-link" href="#">Projects</a>
+	      <a class="nav-link" href="#section2">Projects</a>
 	    </li>
 	  </ul>
 	</div>
   </nav>
 
-  <div class="container">
-	  <ul class="nav nav-tabs nav-justified" role="tablist">
-	    <li class="nav-item">
-	      <a class="nav-link active" data-toggle="tab" href="#aboutme">About Me</a>
-	    </li>
-	    <li class="nav-item">
-	      <a class="nav-link" data-toggle="tab" href="#projects">Projects</a>
-	    </li>
-	<!--
-	    <li class="nav-item">
-	      <a class="nav-link" data-toggle="tab" href="#menu2">Menu 2</a>
-	    </li>
-	-->
-	  </ul>
-
-	  <!-- Tab panes -->
-	  <div class="tab-content">
-	    <div id="aboutme" class="container tab-pane active"><br>
-	      <h3>About Me</h3>
-	      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-	    </div>
-	    <div id="projects" class="container tab-pane fade"><br>
-	      <h3>Projects</h3>
-	      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-	    </div>
-	<!--
-	    <div id="menu2" class="container tab-pane fade"><br>
-	      <h3>Menu 2</h3>
-	      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
-	    </div>
-	-->
-  	  </div>
-  </div>
-
-<div class="container-fluid" style="margin-top:80px">
-  <h3>Top Fixed Navbar</h3>
-  <p>A fixed navigation bar stays visible in a fixed position (top or bottom) independent of the page scroll.</p>
-  <h1>Scroll this page to see the effect</h1>
-</div>
-<!--
-	  <div class="row">
-	    <div class="col-sm-4">
-	      <div class="card">
-		    <div class="card-header">Column 1</div>
-		    <div class="card-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit...</div> 
-		    <div class="card-footer">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</div>
-		  </div>
-	    </div>
-	    <div class="col-sm-4">
-	      <div class="card">
-		    <div class="card-header">Column 1</div>
-		    <div class="card-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit...</div> 
-		    <div class="card-footer">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</div>
-		  </div>
-	    </div>
-	    <div class="col-sm-4">
-	      <div class="card">
-		    <div class="card-header">Column 1</div>
-		    <div class="card-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit...</div> 
-		    <div class="card-footer">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</div>
-		  </div>
-	    </div>
+  <div class="container" id="section-education">
+  	<br/>
+  	<h1>Education</h1>
+  	<br/>
+<div class="row">
+  <div class="col-md">
+	<div class="card shadow" style="max-width: 576px">
+	  <img class="card-img-top" src="https://2qqce331qbpvuwhs03ipa6o4-wpengine.netdna-ssl.com/wp-content/uploads/2016/10/geisel_1.jpg" alt="Card image">
+	  <div class="card-img-overlay">
+	    <h4 class="card-title text-white">Attending School</h4>
+	  </div>
+	  <div class="card-body">
+	    <p class="card-text">University of California, San Diego</p>
 	  </div>
 	</div>
--->
+  	<br/>
+  </div>
+
+  <div class="col-md">
+	<div class="card shadow">
+	  <div class="card-header">
+	  	<h4 class="card-title mb-0">Major</h4>
+	  </div>
+	  <div class="card-body">B.S. Computer Science</div>
+	</div>
+
+  	<br/>
+
+  	<div class="card shadow">
+	  <div class="card-header">
+	  	<h4 class="card-title mb-0">Graduation Date</h4>
+	  </div>
+	  <div class="card-body">B.S. Computer Science</div>
+	</div>
+
+  	<br/>
+
+  	<div class="card shadow">
+	  <div class="card-header">
+	  	<h4 class="card-title mb-0">Cumulative GPA</h4>
+	  </div>
+	  <div class="card-body">
+	  	<div class="font-weight-bold">3.842/4.000</div>
+		(Updated on 2018/12/25)
+	  </div>
+	</div>
+  </div>
+</div>  	
+  	<br/>
+
+  	<div class="card shadow">
+	  <div class="card-header">
+	  	<h4 class="card-title mb-0">Courses Taken at UCSD</h4>
+	  </div>
+	  <div class="card-body">
+	    <p class="card-text font-weight-bold">CSE 100: Advanced Data Structures</p>
+	    <p class="card-text font-weight-bold">CSE 101: Design & Analysis of Algorithm</p>
+	    <p class="card-text">CSE 105: Theory of Computation</p>
+	    <p class="card-text">CSE 107: Intro to Modern Cryptography</p>
+	    <p class="card-text font-weight-bold">CSE 110: Software Engineering</p>
+	    <p class="card-text">CSE 140: Component&Desgn Tech/Digtl Sys</p>
+	    <p class="card-text">CSE 140L: 	Digital Systems Laboratory</p>
+	    <p class="card-text">CSE 145: Embedded System Design Project</p>
+	    <p class="card-text font-weight-bold">CSE 158: Recommender Sys&Web Mining</p>
+	    <p class="card-text font-weight-bold">CSE 167: Computer Graphics</p>
+	    <p class="card-text">CSE 170: Interaction Design</p>
+      	<a href="http://registrar.ucsd.edu/catalog/18-19/courses/CSE.html" class="btn btn-primary">Detailed Course Catalog</a>
+	  </div>
+	</div>
+
+  </div>
+
+  	
+
     <script src="https://code.jquery.com/jquery.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
   </body>
