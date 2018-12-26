@@ -2,3 +2,19 @@
   margin-bottom: 0px;
 }
 
+.custom-border {
+  border-bottom: 1px solid rgba(0,0,0,.125);
+}
+
+.navbar-brand-inactive {
+  color: rgba(255,255,255,.5) !important;
+  margin-left: 16px;
+}
+
+.navbar-brand-inactive:hover {
+  color: rgba(255,255,255,.75) !important;
+}
+
+.nav-link {
+  margin-left: 8px;
+}
