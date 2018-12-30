@@ -7,8 +7,13 @@
 }
 
 .navbar-brand-inactive {
-  color: rgba(255,255,255,.5) !important;
-  margin-left: 16px;
+    color: rgba(255,255,255,.5) !important;
+}
+
+@media (min-width: 768px) {
+  .navbar-brand-inactive {
+    margin-left: 16px;
+  }
 }
 
 .navbar-brand-inactive:hover {
@@ -17,4 +22,8 @@
 
 .nav-link {
   margin-left: 8px;
+}
+
+.text-shadow {
+  text-shadow: 0 .5rem 1rem rgba(0,0,0,.3)
 }
