@@ -27,3 +27,18 @@
 .text-shadow {
   text-shadow: 0 .5rem 1rem rgba(0,0,0,.3)
 }
+
+video {
+	width: 100%;
+	height: auto;    
+    border-radius: .25rem;
+}
+
+.video-container {
+	border-width: 0;
+	border-radius: .25rem; 
+	overflow: hidden;
+}
+.card-body ul {
+	padding-inline-start: inherit;
+}

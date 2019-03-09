@@ -7,6 +7,13 @@ function initializePage() {
 	    $(".collapse").collapse('toggle');
 	});
 
+	$("video").hover(function () {		
+	    $(this).attr("controls","");
+	}, function () {
+		$(this).removeAttr("controls");
+	}
+	);
+
 /*
 	$("#locations").change(function () {
 	    var location = document.getElementById("locations");
