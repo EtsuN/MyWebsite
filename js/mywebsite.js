@@ -9,6 +9,7 @@ function initializePage() {
 
 	$("video").hover(function () {		
 	    $(this).attr("controls","");
+	    //window.alert("hi");
 	}, function () {
 		$(this).removeAttr("controls");
 	}
