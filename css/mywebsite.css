@@ -10,12 +10,6 @@
     color: rgba(255,255,255,.5) !important;
 }
 
-@media (min-width: 768px) {
-  .navbar-brand-inactive {
-    margin-left: 16px;
-  }
-}
-
 .navbar-brand-inactive:hover {
   color: rgba(255,255,255,.75) !important;
 }
@@ -79,4 +73,23 @@ iframe {
 
 .card {
   overflow:hidden;
+}
+
+.index-jumbotron {
+  background-image: url(../img/checkout.jpg); 
+  background-size: contain; 
+  background-position: right;
+  background-repeat: no-repeat;
+  background-color: #FFF;
+}
+
+@media (min-width: 768px) {
+  .navbar-brand-inactive {
+    margin-left: 16px;
+  }
+  .index-jumbotron {
+    background-image: url(../img/glasses.jpg);
+    background-size: contain;
+    background-position: center;
+  }
 }
