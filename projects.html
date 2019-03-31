@@ -19,17 +19,61 @@
 
 <body data-spy="scroll" data-target=".navbar" data-offset="50" style="margin-bottom: 20px">
   
-  <div class="jumbotron text-center" style="background-image: url(img/glasses.jpg); background-size: contain; background-position: center; ">
-  	<br/>
-	<h1 class="text-shadow text-success">Hi! I'm Etsu Nakahara</h1>
-	<a href="https://github.com/EtsuN" class="btn btn-success shadow">GitHub</a>
-	<a href="https://www.linkedin.com/in/%E5%8E%9F%E8%B6%8A-%E4%B8%AD-b3b988138/" class="btn btn-success shadow">LinkedIn</a>
-	<br/>
+  <div id="caro" class="carousel slide" data-ride="carousel">
+
+	  <!-- Indicators -->
+	  <ul class="carousel-indicators">
+	    <li data-target="#caro" data-slide-to="0" class="active"></li>
+	    <!--
+	    <li data-target="#caro" data-slide-to="1"></li>
+	    <li data-target="#caro" data-slide-to="2"></li>
+		-->
+	  </ul>
+
+	  <!-- The slideshow -->
+	  <div class="carousel-inner">
+	    <div class="carousel-item center-parent active">
+	      <div class="text-center center-child">
+	      	
+			<h1 class="text-shadow text-success">Hi! I'm Etsu Nakahara</h1>
+			<a href="https://github.com/EtsuN" class="btn btn-success shadow">GitHub</a>
+			<a href="https://www.linkedin.com/in/%E5%8E%9F%E8%B6%8A-%E4%B8%AD-b3b988138/" class="btn btn-success shadow">LinkedIn</a>
+	      </div>
+	    </div>
+	    <!--
+	    <div class="carousel-item background-black">
+	      <a href="#section6"><img src="img/darkvader.png" class="caro-img"></a>
+	      //<a href="#section6" class="clickable-img"><img src="img/darkvader.png" class="caro-img"></a> 
+		  <div class="carousel-caption">
+		  	<p class="mb-0">Recent Projects:</p>
+		    <h3>DarkVader</h3>
+		    <br/>
+		    <p>DarkVader is a 3D computer game developed by OpenGL, with single player and multiplayer mode.</p>
+		  </div>
+	    </div>
+	    <div class="carousel-item">
+	      <a href="#section7"><img src="img/quora.png" class="caro-img"></a>
+		  <div class="carousel-caption">
+		  	<p class="mb-0">Recent Projects:</p>
+		    <h3>Insincere Quora Question Predictor</h3>
+		    <br/>
+		    <p>Insincere Quora Question Predictor is a predictor that determines whether a Quora question is sincere or not developed by Python.</p>
+		  </div>
+	    </div>
+		-->
+	  </div>
+
+	  <!-- Left and right controls -->
+	  <a class="carousel-control-prev" href="#caro" data-slide="prev">
+	    <span class="carousel-control-prev-icon"></span>
+	  </a>
+	  <a class="carousel-control-next" href="#caro" data-slide="next">
+	    <span class="carousel-control-next-icon"></span>
+	  </a>
+
   </div>
 
-
-
-  <nav class="navbar bg-dark navbar-dark sticky-top">
+  <nav class="navbar bg-dark navbar-dark sticky-top shadow">
  
   	  <a class="navbar-brand active" href="#">Projects</a>
 
@@ -46,7 +90,7 @@
 	        <a class="nav-link" href="#section1">Escape Room (VR Game)</a>
 	      </li>
 	      <li class="nav-item">
-	        <a class="nav-link" href="#section6">Shadow Shooting (PC Game)</a>
+	        <a class="nav-link" href="#section6">DarkVader (PC Game)</a>
 	      </li>
 	      <li class="nav-item">
 	        <a class="nav-link" href="#section7">Insincere Quora Question Predictor</a>

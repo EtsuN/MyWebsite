@@ -7,7 +7,7 @@
 }
 
 .navbar-brand-inactive {
-    color: rgba(255,255,255,.5) !important;
+  color: rgba(255,255,255,.5) !important;
 }
 
 .navbar-brand-inactive:hover {
@@ -83,6 +83,110 @@ iframe {
   background-color: #FFF;
 }
 
+.carousel-indicators li {
+  width: 60px;
+  height: 6px;
+  margin-left: 6px;
+  margin-right: 6px;
+  background-color: #BBB;
+}
+
+.carousel-indicators .active {
+  background-color: #EEE;
+}
+
+.carousel-control-next-icon {
+  background-image: url(../img/next_normal.png);
+}
+
+.carousel-control-prev-icon {
+  background-image: url(../img/prev_normal.png);
+}
+
+.carousel-control-next:hover .carousel-control-next-icon {
+  background-image: url(../img/next_hover.png);
+}
+
+.carousel-control-prev:hover .carousel-control-prev-icon {
+  background-image: url(../img/prev_hover.png);
+}
+
+.carousel-control-next-icon, 
+.carousel-control-prev-icon { 
+  width: 60px;
+  height: 60px;
+}
+
+.carousel-control-next:hover, 
+.carousel-control-prev:hover {
+  opacity: 0.3;
+}
+.carousel-control-next:focus, 
+.carousel-control-prev:focus, 
+.carousel-control-next, 
+.carousel-control-prev { 
+  opacity: 0.5;
+}
+
+.carousel {
+  height: 300px;
+}
+
+.carousel-inner {
+  height: 100%;
+}
+
+.carousel-item {
+  height: 100%;
+}
+
+.carousel-caption h3 {
+  color: white;
+  text-shadow: 0 0 1.5rem black, 0 0 0.8rem black, 0 0 0.8rem black;
+}
+.carousel-caption p {
+  text-shadow: 0 0 1rem black, 0 0 1rem black, 0 0 1rem black, 0 0 0.3rem black, 0 0 0.3rem black;
+}
+.carousel-caption span {
+  box-shadow: 0 0 1.5rem black;
+}
+
+.carousel-item .clickable-img {
+  position: relative;
+  overflow: hidden;
+}
+.caro-img {
+  height: 100%;
+    position: absolute;
+    top: -9999px;
+    bottom: -9999px;
+    left: -9999px;
+    right: -9999px;
+    margin: auto;
+
+}
+
+.background-black {
+  background-color: #000;
+}
+
+.center-parent.active,
+.center-parent.carousel-item-left,
+.center-parent.carousel-item-right,
+.center-parent.carousel-item-prev,
+.center-parent.carousel-item-next {
+  display: table;
+}
+.center-child {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+
+
+
+
+
 @media (min-width: 768px) {
   .navbar-brand-inactive {
     margin-left: 16px;
@@ -91,5 +195,8 @@ iframe {
     background-image: url(../img/glasses.jpg);
     background-size: contain;
     background-position: center;
+  }
+  .carousel {
+    height: 480px;
   }
 }
