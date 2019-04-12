@@ -2,20 +2,28 @@ $(document).ready(function() {
 	initializePage();
 	if ($(".carousel").length > 0)
 		setupCarousel();
+
+	scrollEffect(); //this is needed to avoid blank page
+
+
 });
 
 function initializePage() {
-	$(".nav-link").click(function () {
+	$(".nav-link").click(function() {
 	    $(".collapse").collapse('toggle');
 	});
 
-	$("video").hover(function () {		
+	$("video").hover(function() {		
 	    $(this).attr("controls","");
 	    //window.alert("hi");
-	}, function () {
+	}, function() {
 		$(this).removeAttr("controls");
 	}
 	);
+
+	$(document).on("scroll", function() {
+		scrollEffect()
+	});
 
 
 /*
@@ -41,6 +49,30 @@ function initializePage() {
 	    window.location.href = "https://maps.google.com/?q=" + $(this).parent().find("h3").text();
 	});	
 */
+}
+
+function scrollEffect() {
+	var pageTop = $(document).scrollTop();
+	var pageBottom = pageTop + $(window).height();
+
+	var tags = $(".card, .container > h1, .container > .list-group");
+	for (var i = 0; i < tags.length; i++) {
+	    var tag = tags[i];
+	    var tagTop = $(tag).offset().top;
+	    var tagBottom = tagTop + $(tag).height() - 50;
+
+		if (tagTop < pageBottom && tagBottom > pageTop) { 
+	    	$(tag).addClass("visible");
+	      	$(tag).removeClass("invisible-above");
+	    }
+	    else {
+	      	$(tag).removeClass("visible");
+	      	if (tagBottom < pageTop) {
+	      		$(tag).addClass("invisible-above");
+	      	}
+	    }
+
+	}
 }
 
 var carouselData = {};
@@ -98,14 +130,14 @@ function setupCarousel() {
 		var data = carouselData[featureParam[i]];
 	    $('.carousel-inner').append(
 	      '<div class="carousel-item ' + data["background"] + '">' +
-	        '<a href="#section' + featureParam[i] + '"><img src="' + data["img"] + '" class="caro-img"></a>' +
-		  	'<div class="carousel-caption">' +
+	        '<a href="projects.html#section' + featureParam[i] + '"><img src="' + data["img"] + '" class="caro-img"></a>' +
+		  	'<a href="projects.html#section' + featureParam[i] + '" class="carousel-caption">' +
 		      '<p class="mb-0">Recent Projects:</p>' +
 		      '<h3>' + data["name"] + '</h3>' +
 		      '<h4>' + data["span"] + '</h4>' +
 		      '<br/>' +
 		      '<p>' + data["description"] + '</p>' +
-		    '</div>' +
+		    '</a>' +
 	      '</div>'
 	    ); 
 	    $('.carousel-indicators').append('<li data-target="#caro" data-slide-to="' + (i+1) + '"></li>');

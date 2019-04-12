@@ -1,3 +1,15 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.card {
+  -webkit-transition:  box-shadow 0.3s;
+  transition: box-shadow 0.3s;
+}
+.card:hover {
+  box-shadow:  0 0 1rem #007bff !important; 
+}
+
 .jumbotron {
   margin-bottom: 0px;
 }
@@ -151,6 +163,11 @@ iframe {
   box-shadow: 0 0 1.5rem black;
 }
 
+.carousel-caption:hover {
+  color: white;
+  text-decoration: none;
+}
+
 .carousel-item .clickable-img {
   position: relative;
   overflow: hidden;
@@ -182,7 +199,22 @@ iframe {
   vertical-align: middle;
 }
 
+.card, 
+.container > h1, 
+.container > .list-group {
+  opacity: 0;
+  transform: translate(0, 20px); 
+  transition: all 1s;
+}
 
+.container .visible {
+  opacity: 1;
+  transform: translate(0, 0); 
+}
+
+.container .invisible-above {
+  transform: translate(0, -20px) !important; 
+}
 
 
 
