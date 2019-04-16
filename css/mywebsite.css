@@ -174,12 +174,12 @@ iframe {
 }
 .caro-img {
   height: 100%;
-    position: absolute;
-    top: -9999px;
-    bottom: -9999px;
-    left: -9999px;
-    right: -9999px;
-    margin: auto;
+  position: absolute;
+  top: -9999px;
+  bottom: -9999px;
+  left: -9999px;
+  right: -9999px;
+  margin: auto;
 
 }
 
@@ -191,7 +191,8 @@ iframe {
 .center-parent.carousel-item-left,
 .center-parent.carousel-item-right,
 .center-parent.carousel-item-prev,
-.center-parent.carousel-item-next {
+.center-parent.carousel-item-next,
+.flip-card .center-parent {
   display: table;
 }
 .center-child {
@@ -201,7 +202,8 @@ iframe {
 
 .card, 
 .container > h1, 
-.container > .list-group {
+.container > .list-group,
+.flip-card {
   opacity: 0;
   transform: translate(0, 20px); 
   transition: all 1s;
@@ -216,7 +218,84 @@ iframe {
   transform: translate(0, -20px) !important; 
 }
 
+.flip-card {
+  background-color: transparent;
+  width: 100%;
+  height: 200px;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
 
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card:hover {
+  //box-shadow: none !important;
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: .25rem;
+  overflow: hidden;
+  text-align: center;
+  padding: 15px;
+}
+
+.flip-card .center-child {
+  border-radius: .25rem;
+}
+
+/* Style the front/back side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #bbb;
+  
+  color: white;
+  text-shadow: 0 0 0.8rem black, 0 0 0.8rem black;
+
+}
+
+.flip-card-back {
+  background-color: dodgerblue;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.flip-card-front h4 {
+}
+
+.responsive-col {
+  float: left;
+  width: 50%;
+
+  box-sizing: border-box;
+  padding-right: 15px;
+  padding-left: 15px;
+
+  padding-bottom: 15px;
+}
+
+.responsive-row {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.responsive-row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 
 
 @media (min-width: 768px) {
@@ -230,5 +309,10 @@ iframe {
   }
   .carousel {
     height: 480px;
+  }
+}
+@media (min-width: 992px) {
+  .responsive-col {
+    width: 33%;
   }
 }
