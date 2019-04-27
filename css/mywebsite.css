@@ -297,6 +297,13 @@ iframe {
   clear: both;
 }
 
+.white-shadow {
+  text-shadow: 0 0 0.7rem white, 0 0 0.3rem white;
+}
+
+.transparent {
+  opacity: 0.7;
+}
 
 @media (min-width: 768px) {
   .navbar-brand-inactive {
