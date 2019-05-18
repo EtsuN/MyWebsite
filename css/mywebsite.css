@@ -219,6 +219,7 @@ iframe {
 }
 
 .flip-card {
+  vertical-align: middle;
   background-color: transparent;
   width: 100%;
   height: 200px;
@@ -276,6 +277,7 @@ iframe {
 }
 
 .responsive-col {
+/*
   float: left;
   width: 50%;
 
@@ -283,17 +285,24 @@ iframe {
   padding-right: 15px;
   padding-left: 15px;
 
+  padding-bottom: 15px;*/
+  flex: 50%;
+  max-width: 50%;
+  padding: 0 15px;
   padding-bottom: 15px;
 }
 
 .responsive-row {
   margin-right: -15px;
   margin-left: -15px;
+  display: flex;
+  flex-wrap: wrap;
+  //padding: 0 4px;
 }
 
 .responsive-row:after {
   content: "";
-  display: table;
+  //display: table;
   clear: both;
 }
 
@@ -320,6 +329,8 @@ iframe {
 }
 @media (min-width: 992px) {
   .responsive-col {
-    width: 33%;
+    //width: 33%;
+    flex: 33%;
+    max-width: 33%;
   }
 }

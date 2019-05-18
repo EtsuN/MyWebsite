@@ -182,13 +182,16 @@ function getURLParameter(sParam) {
 
 function setupContents() {
 	var indexOrder = "1675234";
-
+	$('.content-container').append(
+		'<div class="responsive-row"></div>'
+	);	
 	for (var i = 0; i < indexOrder.length; i++) { 
 		var data = carouselData[indexOrder[i]];
+		/*
 		if (i % 3 == 0)
 			$('.content-container').append(
 				'<div class="responsive-row"></div>'
-			);	
+			);	*/
 
 	    $('.content-container .responsive-row').last().append(
 	      '<div class="responsive-col">' +
