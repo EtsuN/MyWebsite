@@ -220,6 +220,7 @@ iframe {
 
 .flip-card {
   vertical-align: middle;
+  cursor: pointer;
   background-color: transparent;
   width: 100%;
   height: 200px;

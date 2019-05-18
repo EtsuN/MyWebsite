@@ -195,7 +195,7 @@ function setupContents() {
 
 	    $('.content-container .responsive-row').last().append(
 	      '<div class="responsive-col">' +
-	        '<div class="flip-card"><div class="flip-card-inner shadow">' +
+	        '<div class="flip-card"  onclick="window.location = ' + `'#section` + indexOrder[i] + `'` + '"><div class="flip-card-inner shadow">' +
 		  	  '<div class="flip-card-front center-parent" style="background-image: url(' + data["img"] + '); background-size: cover;">' +
 		        '<h3 class="center-child">' + data["name"] + '</h3> ' +
 		      '</div>' +
