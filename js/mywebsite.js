@@ -135,6 +135,22 @@ carouselData['4'] = {
 	background: '',
 	span: '<span class="badge badge-secondary">Java</span> <span class="badge badge-secondary">Android Studio</span> <span class="badge badge-secondary">MySQL</span>'
 };
+carouselData['8'] = {
+	name: 'Web Component Library',
+	name_ext: 'Web Component Library (NPM Package)',
+	description: 'This project consists two parts: a NPM package that includes four custom web components and an evaluation web service built by using the NPM package.',
+	img: 'img/sds.png',
+	background: 'background-black',
+	span: '<span class="badge badge-secondary">JavaScript</span> <span class="badge badge-secondary">Node.js</span> <span class="badge badge-secondary">Travis CI</span> <span class="badge badge-secondary">Husky</span>'
+};
+carouselData['9'] = {
+	name: 'Meditation VR App',
+	name_ext: 'Meditation VR App (Oculus Go App)',
+	description: 'This VR App called SriYantra VR provides a VR experience of meditation by using the mystical diagram Sri Yantra.',
+	img: 'img/sriyantra.png',
+	background: 'background-black',
+	span: '<span class="badge badge-secondary">Unity</span> <span class="badge badge-secondary">C#</span>'
+};
 
 
 function setupCarousel() {
@@ -177,7 +193,7 @@ function getURLParameter(sParam) {
             return sParameterName[1];
         }
     }
-    return "6723";
+    return "86723";
 }
 
 function setupContents() {
