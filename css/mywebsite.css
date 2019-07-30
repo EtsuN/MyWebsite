@@ -69,6 +69,10 @@ iframe {
   border-width: 0;
 }
 
+.iframe-black-bg {
+  background-color: black;  
+}
+
 .youtube-container {
   position: relative;
   padding-bottom: 56.25%;

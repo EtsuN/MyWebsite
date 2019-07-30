@@ -197,7 +197,7 @@ function getURLParameter(sParam) {
 }
 
 function setupContents() {
-	var indexOrder = "1675234";
+	var indexOrder = "189675234";
 	$('.content-container').append(
 		'<div class="responsive-row"></div>'
 	);	
