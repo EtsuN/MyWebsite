@@ -1,24 +1,36 @@
 <!DOCTYPE HTML>
 <html lang="en">
+
 <head>
-  <title>My Website</title>
-  <!-- <link rel="icon" href="img/favicon.ico"> -->
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--
+	<title>My Website</title>
+	<!-- <link rel="icon" href="img/favicon.ico"> -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!--
     <link rel="shortcut icon" href="assets/img/icon.png" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     -->
-  <script src="https://code.jquery.com/jquery.js"></script>
-  <link rel="stylesheet" type="text/css" href="css/mywebsite.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="css/mywebsite.css">
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/mywebsite.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="css/mywebsite.css">
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-144979148-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'UA-144979148-1');
+	</script>
+
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="50" style="margin-bottom: 20px">
-  <!--
+	<!--
   <div class="jumbotron text-center index-jumbotron">
   	<br/>
 	<h1 class="text-shadow text-primary">Hi! I'm Etsu Nakahara</h1>
@@ -27,309 +39,346 @@
 	<br/><br/>
   </div>
   -->
-  <div id="caro" class="carousel slide" data-ride="carousel">
+	<div id="caro" class="carousel slide" data-ride="carousel">
 
-	  <ul class="carousel-indicators">
-	    <li data-target="#caro" data-slide-to="0" class="active"></li>
-	    <!-- to be filled -->
-	  </ul>
+		<ul class="carousel-indicators">
+			<li data-target="#caro" data-slide-to="0" class="active"></li>
+			<!-- to be filled -->
+		</ul>
 
-	  <div class="carousel-inner">
-	    <div class="carousel-item center-parent active">
-	      <div class="text-center center-child index-jumbotron">
-	      	
-			<h1 class="text-shadow text-success">Hi! I'm Etsu Nakahara</h1>
-			<a href="https://github.com/EtsuN" class="btn btn-success shadow">GitHub</a>
-			<a href="https://www.linkedin.com/in/%E5%8E%9F%E8%B6%8A-%E4%B8%AD-b3b988138/" class="btn btn-success shadow">LinkedIn</a>
-	      </div>
-	    </div>
-	    <!-- to be filled -->
-	  </div>
+		<div class="carousel-inner">
+			<div class="carousel-item center-parent active">
+				<div class="text-center center-child index-jumbotron">
 
-	  <!-- Left and right controls -->
-	  <a class="carousel-control-prev" href="#caro" data-slide="prev">
-	    <span class="carousel-control-prev-icon"></span>
-	  </a>
-	  <a class="carousel-control-next" href="#caro" data-slide="next">
-	    <span class="carousel-control-next-icon"></span>
-	  </a>
-
-  </div>
-
-  <nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top shadow">
- 
-  	  <a class="navbar-brand active" href="#">About Me</a>
-
-  	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-	    <span class="navbar-toggler-icon"></span>
-	  </button>
-
-	  <div class="collapse navbar-collapse" id="collapsibleNavbar">
-	  	<ul class="navbar-nav">
-	      <li class="nav-item">
-	        <a class="nav-link" href="#section-education">Education</a>
-	      </li>
-	      <li class="nav-item">
-	        <a class="nav-link" href="#section-skills">Skills</a>
-	      </li>
-	      <li class="nav-item">
-	        <a class="nav-link" href="#section-experience">Work Experience</a>
-	      </li>    
-		  <li class="nav-item">
-		    <a class="navbar-brand navbar-brand-inactive" href="projects.html">Projects</a>
-		  </li>
-	    </ul>
-
-	  </div>
-
-  </nav>
-
-  <div class="container" id="section-education">
-  	<br/>
-  	<h1>Education</h1>
-  	<br/>
-
-	<div class="row">
-	  <div class="col-md">
-		<div class="card shadow">
-		  <img class="card-img-top" src="https://2qqce331qbpvuwhs03ipa6o4-wpengine.netdna-ssl.com/wp-content/uploads/2016/10/geisel_1.jpg" alt="Card image" style="max-height: 576px; object-fit: cover;">
-		  <div class="card-img-overlay">
-		    <h4 class="card-title text-white">Attending School</h4>
-		  </div>
-		  <div class="card-body">
-		    <p class="card-text">University of California, San Diego</p>
-		  </div>
-		</div>
-	  	<br/>
-	  </div>
-
-	  <div class="col-md">
-		<div class="card shadow">
-		  <div class="card-header">
-		  	<h4 class="card-title mb-0">Major</h4>
-		  </div>
-		  <div class="card-body">B.S. Computer Science</div>
+					<h1 class="text-shadow text-success">Hi! I'm Etsu Nakahara</h1>
+					<a href="https://github.com/EtsuN" class="btn btn-success shadow">GitHub</a>
+					<a href="https://www.linkedin.com/in/%E5%8E%9F%E8%B6%8A-%E4%B8%AD-b3b988138/"
+						class="btn btn-success shadow">LinkedIn</a>
+				</div>
+			</div>
+			<!-- to be filled -->
 		</div>
 
-	  	<br/>
+		<!-- Left and right controls -->
+		<a class="carousel-control-prev" href="#caro" data-slide="prev">
+			<span class="carousel-control-prev-icon"></span>
+		</a>
+		<a class="carousel-control-next" href="#caro" data-slide="next">
+			<span class="carousel-control-next-icon"></span>
+		</a>
 
-	  	<div class="card shadow">
-		  <div class="card-header">
-		  	<h4 class="card-title mb-0">Graduation Date</h4>
-		  </div>
-		  <div class="card-body">B.S. Computer Science</div>
-		</div>
-
-	  	<br/>
-
-	  	<div class="card shadow">
-		  <div class="card-header">
-		  	<h4 class="card-title mb-0">Cumulative GPA</h4>
-		  </div>
-		  <div class="card-body">
-		  	<div class="font-weight-bold">3.843/4.000</div>
-			(Updated on 2019/07/30)
-		  </div>
-		</div>
-	  </div>
-	</div>  
-
-  	<br/>
-
-  	<div class="card shadow">
-	  <div class="card-header">
-	  	<h4 class="card-title mb-0">Courses Taken at UCSD</h4>
-	  </div>
-	  <div class="card-body">
-	    <p class="card-text font-weight-bold">CSE 100: Advanced Data Structures</p>
-	    <p class="card-text font-weight-bold">CSE 101: Design & Analysis of Algorithm</p>
-	    <p class="card-text">CSE 105: Theory of Computation</p>
-	    <p class="card-text">CSE 107: Intro to Modern Cryptography</p>
-	    <p class="card-text font-weight-bold">CSE 110: Software Engineering</p>
-	    <p class="card-text font-weight-bold">CSE 112: Advanced Software Engineering</p>
-
-	    <p class="card-text">CSE 120: Principle of Computer Opertating Systems</p>
-	    <p class="card-text">CSE 123: Computer Networks</p>
-	    <p class="card-text">CSE 140: Component&Desgn Tech/Digtl Sys</p>
-	    <p class="card-text">CSE 140L: Digital Systems Laboratory</p>
-	    <p class="card-text">CSE 145: Embedded System Design Project</p>
-	    <p class="card-text font-weight-bold">CSE 158: Recommender Sys&Web Mining</p>
-	    <p class="card-text font-weight-bold">CSE 167: Computer Graphics</p>
-	    <p class="card-text">CSE 170: Interaction Design</p>
-	    <p class="card-text font-weight-bold">CSE 190: Virtual Reality Technology</p>
-      	<a href="http://registrar.ucsd.edu/catalog/18-19/courses/CSE.html" class="btn btn-primary float-right shadow">Detailed Course Catalog</a>
-	  </div>
 	</div>
 
-	<br/>
+	<nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top shadow">
 
-  </div>
+		<a class="navbar-brand active" href="#">About Me</a>
 
-  <br/>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+			<span class="navbar-toggler-icon"></span>
+		</button>
 
-  <div class="container" id="section-skills">
-  	<br/>
-  	<h1>Skills</h1>
-  	<br/>
+		<div class="collapse navbar-collapse" id="collapsibleNavbar">
+			<ul class="navbar-nav">
+				<li class="nav-item">
+					<a class="nav-link" href="#section-education">Education</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#section-skills">Skills</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#section-experience">Work Experience</a>
+				</li>
+				<li class="nav-item">
+					<a class="navbar-brand navbar-brand-inactive" href="projects.html">Projects</a>
+				</li>
+			</ul>
 
-	<div class="row">
-	  <div class="col-md">
-
-	  	<div class="card shadow">
-		  <div class="card-header">
-		  	<h4 class="card-title mb-0">Coding</h4>
-		  </div>
-		  <div class="card-body">
-		    <p class="card-text font-weight-bold">Java, C, C++</p>
-		    <p class="card-text">C#, Python, Shell-scripting on Unix/Linux, JavaScript, PHP, HTML/CSS, ARM Assembly, Verilog</p>
-		  </div>
 		</div>
 
-	  	<br/>
-	  </div>
+	</nav>
 
-	  <div class="col-md">
+	<div class="container" id="section-education">
+		<br />
+		<h1>Education</h1>
+		<br />
+
+		<div class="row">
+			<div class="col-md">
+				<div class="card shadow">
+					<img class="card-img-top"
+						src="https://2qqce331qbpvuwhs03ipa6o4-wpengine.netdna-ssl.com/wp-content/uploads/2016/10/geisel_1.jpg"
+						alt="Card image" style="max-height: 576px; object-fit: cover;">
+					<div class="card-img-overlay">
+						<h4 class="card-title text-white">Attending School</h4>
+					</div>
+					<div class="card-body">
+						<p class="card-text">University of California, San Diego</p>
+					</div>
+				</div>
+				<br />
+			</div>
+
+			<div class="col-md">
+				<div class="card shadow">
+					<div class="card-header">
+						<h4 class="card-title mb-0">Major</h4>
+					</div>
+					<div class="card-body">B.S. Computer Science</div>
+				</div>
+
+				<br />
+
+				<div class="card shadow">
+					<div class="card-header">
+						<h4 class="card-title mb-0">Graduation Date</h4>
+					</div>
+					<div class="card-body">B.S. Computer Science</div>
+				</div>
+
+				<br />
+
+				<div class="card shadow">
+					<div class="card-header">
+						<h4 class="card-title mb-0">Cumulative GPA</h4>
+					</div>
+					<div class="card-body">
+						<div class="font-weight-bold">3.843/4.000</div>
+						(Updated on 2019/07/30)
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<br />
 
 		<div class="card shadow">
-		  <div class="card-header">
-		  	<h4 class="card-title mb-0">Environment/Technology</h4>
-		  </div>
-		  <div class="card-body">Windows, Linux/Unix, Visual Studio, Android Studio, OpenGL, Node.js, Git, Travis CI, Husky, MySQL, Firebase, Unity, Adobe Premiere, ROS</div>
+			<div class="card-header">
+				<h4 class="card-title mb-0">Courses Taken at UCSD</h4>
+			</div>
+			<div class="card-body">
+				<p class="card-text font-weight-bold">CSE 100: Advanced Data Structures</p>
+				<p class="card-text font-weight-bold">CSE 101: Design & Analysis of Algorithm</p>
+				<p class="card-text">CSE 105: Theory of Computation</p>
+				<p class="card-text">CSE 107: Intro to Modern Cryptography</p>
+				<p class="card-text font-weight-bold">CSE 110: Software Engineering</p>
+				<p class="card-text font-weight-bold">CSE 112: Advanced Software Engineering</p>
+
+				<p class="card-text">CSE 120: Principle of Computer Opertating Systems</p>
+				<p class="card-text">CSE 123: Computer Networks</p>
+				<p class="card-text">CSE 140: Component&Desgn Tech/Digtl Sys</p>
+				<p class="card-text">CSE 140L: Digital Systems Laboratory</p>
+				<p class="card-text">CSE 145: Embedded System Design Project</p>
+				<p class="card-text font-weight-bold">CSE 158: Recommender Sys&Web Mining</p>
+				<p class="card-text font-weight-bold">CSE 167: Computer Graphics</p>
+				<p class="card-text">CSE 170: Interaction Design</p>
+				<p class="card-text font-weight-bold">CSE 190: Virtual Reality Technology</p>
+				<a href="http://registrar.ucsd.edu/catalog/18-19/courses/CSE.html"
+					class="btn btn-primary float-right shadow">Detailed Course Catalog</a>
+			</div>
 		</div>
 
-	  	<br/>
+		<br />
 
-	  </div>
-    </div>  
+	</div>
 
-	<div class="row">
-	  <div class="col-md">
+	<br />
 
-	  	<div class="card shadow">
-		  <div class="card-header">
-		  	<h4 class="card-title mb-0">Testing</h4>
-		  </div>
-		  <div class="card-body">GDB, Valgrind, Unit testing, Logging, Profiling</div>
+	<div class="container" id="section-skills">
+		<br />
+		<h1>Skills</h1>
+		<br />
+
+		<div class="row">
+			<div class="col-md">
+
+				<div class="card shadow">
+					<div class="card-header">
+						<h4 class="card-title mb-0">Coding</h4>
+					</div>
+					<div class="card-body">
+						<p class="card-text font-weight-bold">Java, C, C++</p>
+						<p class="card-text">C#, Python, Shell-scripting on Unix/Linux, JavaScript, PHP, HTML/CSS, ARM Assembly,
+							Verilog</p>
+					</div>
+				</div>
+
+				<br />
+			</div>
+
+			<div class="col-md">
+
+				<div class="card shadow">
+					<div class="card-header">
+						<h4 class="card-title mb-0">Environment/Technology</h4>
+					</div>
+					<div class="card-body">Windows, Linux/Unix, Visual Studio, Android Studio, OpenGL, Node.js, Git, Travis CI,
+						Husky, MySQL, Firebase, Unity, Adobe Premiere, ROS</div>
+				</div>
+
+				<br />
+
+			</div>
 		</div>
 
-	  	<br/>
+		<div class="row">
+			<div class="col-md">
 
-	  </div>
+				<div class="card shadow">
+					<div class="card-header">
+						<h4 class="card-title mb-0">Testing</h4>
+					</div>
+					<div class="card-body">GDB, Valgrind, Unit testing, Logging, Profiling</div>
+				</div>
 
-	  <div class="col-md">
+				<br />
+
+			</div>
+
+			<div class="col-md">
+
+				<div class="card shadow">
+					<div class="card-header">
+						<h4 class="card-title mb-0">Language</h4>
+					</div>
+					<div class="card-body">Fluent Japanese, Chinese, and English</div>
+				</div>
+				<br />
+			</div>
+		</div>
+	</div>
+
+	<br />
+
+	<div class="container" id="section-experience">
+		<br />
+		<h1>Work Experience</h1>
+		<br />
 
 		<div class="card shadow">
-		  <div class="card-header">
-		  	<h4 class="card-title mb-0">Language</h4>
-		  </div>
-		  <div class="card-body">Fluent Japanese, Chinese, and English</div>
+			<img class="card-img-top custom-border transparent"
+				src="https://www.zoro.com/static/assets/img/base/header/zoro-logo.12e3e26a.svg"
+				style="max-height: 238px; object-fit: contain;">
+			<div class="card-img-overlay">
+				<h4 class="card-title white-shadow">Software Engineering Intern @ Zoro.com</h4>
+			</div>
+			<div class="card-header">
+				<p class="card-text float-right">June 2019 - August 2019</p>
+			</div>
+			<div class="card-body">
+				<ul>
+					<li>Developing an Alexa skill to provide vocal experience of using zoro.com which provides the following
+						functionalities: search for items, learn more info about the search results, get email of the search
+						results, and edit the shopping cart, and receive the link to the cart.</li>
+					<span class="badge badge-secondary">Node.js</span>
+					<span class="badge badge-secondary">AWS Lambda</span>
+					<li>
+						<p class="card-text">Utilized Jenkins pipeline which includes style enforcement, unit testing, and test
+							coverage generation.</p>
+					</li>
+					<span class="badge badge-secondary">Jenkins</span>
+					<span class="badge badge-secondary">Husky</span>
+					<li>
+						<p class="card-text">Conducting user testing with employees and customer surveys with actual customers of
+							zoro.com with the UX team.</p>
+					</li>
+					<li>
+						<p class="card-text">Developed a program to estimate delivery time and distance by using UPS and Google Map
+							API to help out the project of the supply chain intern.</p>
+					</li>
+					<span class="badge badge-secondary">Node.js</span>
+				</ul>
+			</div>
 		</div>
-		<br/>
-	  </div>
-    </div> 	
-  </div>
 
-  <br/>
+		<br />
 
-  <div class="container" id="section-experience">
-  	<br/>
-  	<h1>Work Experience</h1>
-  	<br/>
+		<div class="card shadow">
+			<img class="card-img-top custom-border transparent"
+				src="https://tse3.mm.bing.net/th?id=OIP.miwZNghfqFh_O7EFkHV_hAAAAA&pid=Api&w=300&h=300&rs=1&p=0"
+				style="max-height: 238px; object-fit: contain;">
+			<div class="card-img-overlay">
+				<h4 class="card-title white-shadow">Software Engineering Intern @ ticktBox</h4>
+			</div>
+			<div class="card-header">
+				<p class="card-text float-right">April 2018 - June 2018</p>
+			</div>
+			<div class="card-body">
+				<ul>
+					<li>Developed a website page to present movie trailers.</li>
+					<span class="badge badge-secondary">PHP</span>
+					<span class="badge badge-secondary">HTML/CSS</span>
+					<span class="badge badge-secondary">JavaScript</span>
+					<span class="badge badge-secondary">CodeIgniter Web Framework</span>
+					<li>
+						<p class="card-text">Optimized the website pages for submitting and editing movie information.</p>
+					</li>
+				</ul>
+			</div>
+		</div>
 
-  	<div class="card shadow">
-	  <img class="card-img-top custom-border transparent" src="https://www.zoro.com/static/assets/img/base/header/zoro-logo.12e3e26a.svg" style="max-height: 238px; object-fit: contain;">
-	  <div class="card-img-overlay">
-	    <h4 class="card-title white-shadow">Software Engineering Intern @ Zoro.com</h4>
-	  </div>
-	  <div class="card-header">
-	  	<p class="card-text float-right">June 2019 - August 2019</p>
-	  </div>
-	  <div class="card-body">
-	  	<ul>
-	  	  <li>Developing an Alexa skill to provide vocal experience of using zoro.com which provides the following functionalities: search for items, learn more info about the search results, get email of the search results, and edit the shopping cart, and receive the link to the cart.</li>
-	  	  <span class="badge badge-secondary">Node.js</span>
-	  	  <span class="badge badge-secondary">AWS Lambda</span>   
-		  <li><p class="card-text">Utilized Jenkins pipeline which includes style enforcement, unit testing, and test coverage generation.</p></li>
-		  <span class="badge badge-secondary">Jenkins</span>
-	  	  <span class="badge badge-secondary">Husky</span>
-	  	  <li><p class="card-text">Conducting user testing with employees and customer surveys with actual customers of zoro.com with the UX team.</p></li>
-	  	  <li><p class="card-text">Developed a program to estimate delivery time and distance by using UPS and Google Map API to help out the project of the supply chain intern.</p></li>
-		  <span class="badge badge-secondary">Node.js</span>
-	  	</ul>
-	  </div>
+		<br />
+
+		<div class="card shadow">
+			<img class="card-img-top custom-border transparent"
+				src="https://2ch0ii35pfo82tskhvz2b23217-wpengine.netdna-ssl.com/wp-content/uploads/2018/01/weber-shandwick-logo.png"
+				style="max-height: 238px; object-fit: contain; padding: 50px 0;">
+			<div class="card-img-overlay">
+				<h4 class="card-title white-shadow">Healthcare Intern @ Weber Shandwick</h4>
+			</div>
+			<div class="card-header">
+				<p class="card-text float-right">August 2017 - September 2017</p>
+			</div>
+			<div class="card-body">
+				<ul>
+
+					<li>
+						<p class="card-text">Prepared and organized the information of the clients and their competitors which is
+							needed for the pitch deck by using online source from different countries.</p>
+					</li>
+					<span class="badge badge-secondary">Microsoft Office</span>
+					<span class="badge badge-secondary">Japanese</span>
+					<span class="badge badge-secondary">Chinese</span>
+					<li>
+						<p class="card-text">Translated presentations and documents for the English-speaking clients and
+							Chinese-speaking co-workers.</p>
+					</li>
+					<span class="badge badge-secondary">Chinese</span>
+				</ul>
+			</div>
+		</div>
+
+		<br />
+
+		<div class="card shadow">
+			<img class="card-img-top custom-border transparent"
+				src="http://www.asianscientist.com/wp-content/uploads/2014/05/WuXi-Begins-Construction-Of-New-Facility-In-Philadelphia.jpg"
+				style="max-height: 238px; object-fit: cover;">
+			<div class="card-img-overlay">
+				<h4 class="card-title white-shadow">Mobile Team Intern @ WuXi AppTec</h4>
+			</div>
+			<div class="card-header">
+				<p class="card-text float-right">July 2017 - August 2017</p>
+			</div>
+			<div class="card-body">
+				<ul>
+					<li>
+						<p class="card-text">Designed and developed a mobile website for the employees to use to search hotels for
+							business trips in a team of four.</p>
+					</li>
+					<span class="badge badge-secondary">C#</span>
+					<span class="badge badge-secondary">MVC Framework</span>
+				</ul>
+			</div>
+		</div>
+
+		<br />
+
 	</div>
 
-	<br/>
-
-	<div class="card shadow">
-	  <img class="card-img-top custom-border transparent" src="https://tse3.mm.bing.net/th?id=OIP.miwZNghfqFh_O7EFkHV_hAAAAA&pid=Api&w=300&h=300&rs=1&p=0" style="max-height: 238px; object-fit: contain;">
-	  <div class="card-img-overlay">
-	    <h4 class="card-title white-shadow">Software Engineering Intern @ ticktBox</h4>
-	  </div>
-	  <div class="card-header">
-	  	<p class="card-text float-right">April 2018 - June 2018</p>
-	  </div>
-	  <div class="card-body">
-	  	<ul>
-	  	  <li>Developed a website page to present movie trailers.</li>
-	  	  <span class="badge badge-secondary">PHP</span>
-	  	  <span class="badge badge-secondary">HTML/CSS</span>
-	  	  <span class="badge badge-secondary">JavaScript</span>
-	  	  <span class="badge badge-secondary">CodeIgniter Web Framework</span>
-	      <li><p class="card-text">Optimized the website pages for submitting and editing movie information.</p></li>
-	  	</ul>
-	  </div>
-	</div>
-
-	<br/>
-
-	<div class="card shadow">
-	  <img class="card-img-top custom-border transparent" src="https://2ch0ii35pfo82tskhvz2b23217-wpengine.netdna-ssl.com/wp-content/uploads/2018/01/weber-shandwick-logo.png" style="max-height: 238px; object-fit: contain; padding: 50px 0;">
-	  <div class="card-img-overlay">
-	    <h4 class="card-title white-shadow">Healthcare Intern @ Weber Shandwick</h4>
-	  </div>
-	  <div class="card-header">
-	  	<p class="card-text float-right">August 2017 - September 2017</p>
-	  </div>
-	  <div class="card-body">
-	  	<ul>
-	  	  
-	  	  <li><p class="card-text">Prepared and organized the information of the clients and their competitors which is needed for the pitch deck by using online source from different countries.</p></li>
-	  	  <span class="badge badge-secondary">Microsoft Office</span>
-	  	  <span class="badge badge-secondary">Japanese</span>
-	  	  <span class="badge badge-secondary">Chinese</span>
-	  	  <li><p class="card-text">Translated presentations and documents for the English-speaking clients and Chinese-speaking co-workers.</p></li>
-	  	  <span class="badge badge-secondary">Chinese</span>
-	  	</ul>
-	  </div>
-	</div>
-
-	<br/>
-
-	<div class="card shadow">
-	  <img class="card-img-top custom-border transparent" src="http://www.asianscientist.com/wp-content/uploads/2014/05/WuXi-Begins-Construction-Of-New-Facility-In-Philadelphia.jpg" style="max-height: 238px; object-fit: cover;">
-	  <div class="card-img-overlay">
-	    <h4 class="card-title white-shadow">Mobile Team Intern @ WuXi AppTec</h4>
-	  </div>
-	  <div class="card-header">
-	  	<p class="card-text float-right">July 2017 - August 2017</p>
-	  </div>
-	  <div class="card-body">
-	  	<ul>
-	  	  <li><p class="card-text">Designed and developed a mobile website for the employees to use to search hotels for business trips in a team of four.</p></li>
-	  	  <span class="badge badge-secondary">C#</span>
-	  	  <span class="badge badge-secondary">MVC Framework</span>
-	  	</ul>
-	  </div>
-	</div>
-
-	<br/>
-
-  </div>
-
-	  
 
 
-  <script type="text/javascript" src="js/mywebsite.js"></script>
+
+	<script type="text/javascript" src="js/mywebsite.js"></script>
 </body>
+
 </html>
