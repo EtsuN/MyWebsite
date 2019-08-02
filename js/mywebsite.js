@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
 	initializePage();
 	if ($(".carousel").length > 0)
 		setupCarousel();
@@ -7,50 +7,25 @@ $(document).ready(function() {
 
 	scrollEffect(); //this is needed to avoid blank page
 
-
+	addGoogleAnalyticsEventTracker();
 });
 
 function initializePage() {
-	$(".nav-link").click(function() {
-	    $(".collapse").collapse('toggle');
+	$(".nav-link").click(function () {
+		$(".collapse").collapse('toggle');
 	});
 
-	$("video").hover(function() {		
-	    $(this).attr("controls","");
-	    //window.alert("hi");
-	}, function() {
+	$("video").hover(function () {
+		$(this).attr("controls", "");
+		//window.alert("hi");
+	}, function () {
 		$(this).removeAttr("controls");
 	}
 	);
 
-	$(document).on("scroll", function() {
-		scrollEffect()
+	$(document).on("scroll", function () {
+		scrollEffect();
 	});
-
-
-/*
-	$("#locations").change(function () {
-	    var location = document.getElementById("locations");
-		var loc = "." + location.options[location.selectedIndex].value;
-		$("div.brewery-list").children().show();
-		if (loc != ".all") {
-			$("div.brewery-list").children().not(loc).hide();
-		}
-	});
-
-	$(".close-nav").click(function () {
-	    $(".sidenav").css("width", "0");
-	});
-
-	$(".brewery a").click(function () {
-	    localStorage.setItem('currentBrewery', $(this).next().text());
-	    localStorage.setItem('currentBreweryIndex', $(this).parent().attr('data-value'));
-	});	
-
-	$(".brewery h3, .brewery p").click(function () {
-	    window.location.href = "https://maps.google.com/?q=" + $(this).parent().find("h3").text();
-	});	
-*/
 }
 
 function scrollEffect() {
@@ -59,22 +34,59 @@ function scrollEffect() {
 
 	var tags = $(".card, .container > h1, .container > .list-group, .flip-card");
 	for (var i = 0; i < tags.length; i++) {
-	    var tag = tags[i];
-	    var tagTop = $(tag).offset().top;
-	    var tagBottom = tagTop + $(tag).height() - 50;
+		var tag = tags[i];
+		var tagTop = $(tag).offset().top;
+		var tagBottom = tagTop + $(tag).height() - 50;
 
-		if (tagTop < pageBottom && tagBottom > pageTop) { 
-	    	$(tag).addClass("visible");
-	      	$(tag).removeClass("invisible-above");
-	    }
-	    else {
-	      	$(tag).removeClass("visible");
-	      	if (tagBottom < pageTop) {
-	      		$(tag).addClass("invisible-above");
-	      	}
-	    }
-
+		if (tagTop < pageBottom && tagBottom > pageTop) {
+			$(tag).addClass("visible");
+			$(tag).removeClass("invisible-above");
+		}
+		else {
+			$(tag).removeClass("visible");
+			if (tagBottom < pageTop) {
+				$(tag).addClass("invisible-above");
+			}
+		}
 	}
+}
+
+function addGoogleAnalyticsEventTracker() {
+	$("a").toArray().forEach((button) => {
+		button.addEventListener("click", function () {
+			gtag('event', 'click', {
+				'event_category': 'button',
+				'event_label': button.text(),
+			});
+		});
+	});
+	
+	$("iframe").toArray().forEach((ifrm) => {
+		ifrm.addEventListener("mouseenter", function () {
+			gtag('event', 'mouseenter', {
+				'event_category': 'iframe',
+				'event_label': ifrm.innerHTML,
+				'value': Date.now(),
+			});
+		});
+		ifrm.addEventListener("mouseleave", function () {
+			gtag('event', 'mouseleave', {
+				'event_category': 'iframe',
+				'event_label': ifrm.innerHTML,
+				'value': Date.now(),
+			});
+		});
+	});
+
+	$("video").toArray().forEach((video) => {
+		video.addEventListener("click", function () {
+			gtag('event', 'click', {
+				'event_category': 'video',
+				'event_label': video.innerHTML,
+				'value': Date.now(),
+			});
+		});
+	});
 }
 
 var carouselData = {};
@@ -158,7 +170,7 @@ function setupCarousel() {
 		interval: 2500,
 		pause: "hover"
 	});
-	setTimeout(function() {
+	setTimeout(function () {
 		$(".carousel").carousel('next');
 	}, 750);
 
@@ -166,42 +178,42 @@ function setupCarousel() {
 	//if (featureParam.length == 0) {
 	//	featureParam = "6723";
 	//}
-	for (var i = 0; i < featureParam.length; i++) { 
+	for (var i = 0; i < featureParam.length; i++) {
 		var data = carouselData[featureParam[i]];
-	    $('.carousel-inner').append(
-	      '<div class="carousel-item ' + data["background"] + '">' +
-	        '<a href="projects.html#section' + featureParam[i] + '"><img src="' + data["img"] + '" class="caro-img"></a>' +
-		  	'<a href="projects.html#section' + featureParam[i] + '" class="carousel-caption">' +
-		      '<p class="mb-0">Recent Projects:</p>' +
-		      '<h3>' + data["name"] + '</h3>' +
-		      '<h4>' + data["span"] + '</h4>' +
-		      '<br/>' +
-		      '<p>' + data["description"] + '</p>' +
-		    '</a>' +
-	      '</div>'
-	    ); 
-	    $('.carousel-indicators').append('<li data-target="#caro" data-slide-to="' + (i+1) + '"></li>');
+		$('.carousel-inner').append(
+			'<div class="carousel-item ' + data["background"] + '">' +
+			'<a href="projects.html#section' + featureParam[i] + '"><img src="' + data["img"] + '" class="caro-img"></a>' +
+			'<a href="projects.html#section' + featureParam[i] + '" class="carousel-caption">' +
+			'<p class="mb-0">Recent Projects:</p>' +
+			'<h3>' + data["name"] + '</h3>' +
+			'<h4>' + data["span"] + '</h4>' +
+			'<br/>' +
+			'<p>' + data["description"] + '</p>' +
+			'</a>' +
+			'</div>'
+		);
+		$('.carousel-indicators').append('<li data-target="#caro" data-slide-to="' + (i + 1) + '"></li>');
 	}
 }
 
 function getURLParameter(sParam) {
-    var sPageURL = window.location.search.substring(1);
-    var sURLVariables = sPageURL.split('&');
-    for (var i = 0; i < sURLVariables.length; i++) { 
-        var sParameterName = sURLVariables[i].split('=');
-        if (sParameterName[0] == sParam) {
-            return sParameterName[1];
-        }
-    }
-    return "86723";
+	var sPageURL = window.location.search.substring(1);
+	var sURLVariables = sPageURL.split('&');
+	for (var i = 0; i < sURLVariables.length; i++) {
+		var sParameterName = sURLVariables[i].split('=');
+		if (sParameterName[0] == sParam) {
+			return sParameterName[1];
+		}
+	}
+	return "86723";
 }
 
 function setupContents() {
 	var indexOrder = "189675234";
 	$('.content-container').append(
 		'<div class="responsive-row"></div>'
-	);	
-	for (var i = 0; i < indexOrder.length; i++) { 
+	);
+	for (var i = 0; i < indexOrder.length; i++) {
 		var data = carouselData[indexOrder[i]];
 		/*
 		if (i % 3 == 0)
@@ -209,19 +221,19 @@ function setupContents() {
 				'<div class="responsive-row"></div>'
 			);	*/
 
-	    $('.content-container .responsive-row').last().append(
-	      '<div class="responsive-col">' +
-	        '<div class="flip-card"  onclick="window.location = ' + `'#section` + indexOrder[i] + `'` + '"><div class="flip-card-inner shadow">' +
-		  	  '<div class="flip-card-front center-parent" style="background-image: url(' + data["img"] + '); background-size: cover;">' +
-		        '<h3 class="center-child">' + data["name"] + '</h3> ' +
-		      '</div>' +
-		      '<div class="flip-card-back center-parent"><div class="center-child">' +
-		        '<h4>' + data["name_ext"] + '</h4>' +
-		        '<h4>' + data["span"] + '</h4>' +
-		        '<img src="img/goto.png" style="max-height: 50px; object-fit: contain;">' +
-		      '</div></div>' +
-	        '</div></div>' +
-	      '</div>'
-	    ); 
-	}	
+		$('.content-container .responsive-row').last().append(
+			'<div class="responsive-col">' +
+			'<div class="flip-card"  onclick="window.location = ' + `'#section` + indexOrder[i] + `'` + '"><div class="flip-card-inner shadow">' +
+			'<div class="flip-card-front center-parent" style="background-image: url(' + data["img"] + '); background-size: cover;">' +
+			'<h3 class="center-child">' + data["name"] + '</h3> ' +
+			'</div>' +
+			'<div class="flip-card-back center-parent"><div class="center-child">' +
+			'<h4>' + data["name_ext"] + '</h4>' +
+			'<h4>' + data["span"] + '</h4>' +
+			'<img src="img/goto.png" style="max-height: 50px; object-fit: contain;">' +
+			'</div></div>' +
+			'</div></div>' +
+			'</div>'
+		);
+	}
 }
